@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/index.css" />
+<style>
+@font-face {
+  font-family: BAUHS93;
+  src: url(webfonts/BAUHS93.woff);
+}
+
+@font-face {
+  font-family: HARLOWSI;
+  src: url(webfonts/HARLOWSI_1.ttf);
+}
+
+p {
+  font-family: forte;
+  font-size: 60px;
+  text-align: center;
+  color: red;
+  text-transform: uppercase;
+}
+
+p:hover {
+  font-style: italic;
+  -ms-transform: rotate(20deg); /* IE 9 */
+  transform: rotate(20deg);
+}
+
+h1 {
+  font-family: HARLOWSI;
+  font-size: 26px;
+  text-align: center;
+  color: white;
+}
+
+h1:hover {
+  font-style: italic;
+  -ms-transform: rotate(20deg); /* IE 9 */
+  transform: rotate(20deg);
+}
+
+h2 {
+  font-family: BAUHS93;
+  font-size: 40px;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+}
+
+h2:hover {
+  font-style: italic;
+  -ms-transform: rotate(20deg); /* IE 9 */
+  transform: rotate(20deg);
+}
+
+.scroll {
+  width: 600px;
+  height: 950px;
+  overflow-y: scroll; /* Add the ability to scroll */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scroll::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE and Edge */
+.scroll {
+    -ms-overflow-style: none;
+}
+
+.okvir { 
+  height: 860px;
+  width: 1600px;
+  position: relative;
+  padding:0.25em;
+  display:inline-block;
+  border:none;
+  background-color:;
+  background:
+    linear-gradient(to top,lightgreen,blue)  0 100%,
+    linear-gradient(to right,lightgreen,lightgreen)100% bottom,
+    linear-gradient(to top,lightgreen,blue) bottom right ,
+    linear-gradient(to top,lightgreen,blue) top right;
+  background-size: 3px 0%, 0% 3px,3px 0%, 0% 6px;
+  background-repeat:no-repeat,no-repeat,no-repeat,no-repeat;
+  transition:1s;
+}
+
+.okvir:hover {
+  background-size: 6px 100%, 100% 6px, 6px 100%, 100% 6px;
+}
+
+.pozicija1 {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.buttonload {
+  opacity: 1;
+  background-color: black;
+  border: none; /* Remove borders */
+  color: white; /* White text */
+  padding: 20px 40px; /* Some padding */
+  font-size: 32px; /* Set a font-size */
+}
+
+.pozicija2 {
+  margin: 0;
+  position: absolute;
+  top: 3%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.okvir2 { 
+  height: center;
+  width: center;
+  position: relative;
+}
+
+.buttonload:hover {
+  opacity: 1;
+  animation: myfirst 10s 2;
+}
+
+@keyframes myfirst {
+  0%   {background: red; left: 0px; top: 0px;}
+  25%  {background: yellow; left: 20px; top: 0px;}
+  50%  {background: blue; left: 20px; top: 20px;}
+  75%  {background: green; left: 0px; top: 20px;}
+  100% {background: red; left: 0px; top: 0px;}
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+  font-size: 17px;
+}
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+}
+
+.content {
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+
+#myBtn {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+#myBtn:hover {
+  background: #ddd;
+  color: black;
+}
+</style>
+</head>
+<body>
+<!-- -->
+<!--VIDEO BACKGORUND-->
+<!-- -->
+<video autoplay muted loop id="myVideo">
+  <source src="vid/LoadingScreen.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+
+<div class="content">
+<button id="myBtn" onclick="myFunction()">Pause</button>
+</div>
+
+<script>
+var video = document.getElementById("myVideo");
+var btn = document.getElementById("myBtn");
+
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Pause";
+  } else {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+}
+</script>
+<!--/VIDEO BACKGORUND-->
+
+
+
+<div class="pozicija1">
+  <div class="okvir">
+    <div id="intro">
+      <div>
+        <img src='png.png' class="heartBeat animated infinite"style='width:424px;height:424px;'>
+      </div>
+
+      <div><img src='Discord.png' style='width:70px;height:17px'>
+        <div> 
+          <font face='Montserrat' size="3px" style='color: white;'>Discord LINK</font>
+          <br>
+          <font face='Montserrat' size="3px" style='color: white;'>Pritisnite <strong>Space</strong> da začnete/ustavite muziko</font>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="pozicija2">
+  <div class="okvir2">
+    <button class="buttonload">
+	  <i class="fa fa-circle-o-notch fa-spin"></i> Loading
+	</button>
+  </div>
+</div>
+
+
+
+
+<!-- -->
+<!--MUZIKA BACKGORUND-->
+<!-- -->
+<audio id="leson" src="audio.mp3" autoplay="true" hidden="true" loop="true"/>
+
+<script>
+var play = false;
+var myAudio = document.getElementById("leson");
+    
+myAudio.volume = 0.1;
+
+function onKeyDown(event) {
+  switch (event.keyCode) {
+    case 32: //SpaceBar                    
+      if (play) {
+        myAudio.pause();
+        play = false;
+      } else {
+        myAudio.play();
+        play = true;
+      }
+    break;
+    }
+      return false;
+    }
+
+window.addEventListener("keydown", onKeyDown, false);
+</script>
+<!--/MUZIKA BACKGORUND-->
+</body>
+</html>
